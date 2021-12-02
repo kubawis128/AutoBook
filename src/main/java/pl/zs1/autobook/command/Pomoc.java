@@ -1,15 +1,18 @@
-package autoopen_book.autoopen_book;
+package pl.zs1.autobook.command;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.jetbrains.annotations.NotNull;
 
-public class CommandPomoc implements CommandExecutor {
+import static pl.zs1.autobook.Book.OpenBook;
+
+public class Pomoc implements CommandExecutor {
 
     // This is called when somebody uses command
     @Override
-    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+    public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, String[] args) {
 
         // If sender is Player
         if (sender instanceof Player) {
@@ -18,15 +21,10 @@ public class CommandPomoc implements CommandExecutor {
             Player player = (Player) sender;
 
             // And open book for him
-            AutoOpen_Book.OpenBook(player);
-
+            OpenBook(player);
             return true; // Completed successfully
-
-        }else{
-
-            return true; // Failed
-
         }
+        return false; // Failed
 
     }
 }

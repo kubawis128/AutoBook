@@ -1,8 +1,10 @@
-name: AutoOpen_Book
+name: Autobook
 version: '${project.version}'
-main: autoopen_book.autoopen_book.AutoOpen_Book
+main: pl.zs1.autobook.Main
 api-version: 1.17
-description: Auto open book on join'
+authors: [ Jakub_Wisniewski, Kacper_Lapka ]
+description: Auto open book
+website: https://zs1.nowotarski.edu.pl/
 commands:
   pomoc:
     description: Otwórz książkę z listą pomocy
