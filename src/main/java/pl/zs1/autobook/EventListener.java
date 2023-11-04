@@ -19,16 +19,4 @@ public class EventListener implements Listener {
         OpenBook(player);
 
     }
-
-    @EventHandler(priority = EventPriority.HIGHEST)
-    public void playerResourcePack(PlayerResourcePackStatusEvent event){
-
-        Status status = event.getStatus();
-        if(status == Status.ACCEPTED){
-            OpenBook(event.getPlayer());
-        }
-
-    }
-
-
 }
